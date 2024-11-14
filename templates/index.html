@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spam Identifier</title>
+    <link rel="icon" type="image/icon" href="{{ url_for('static', filename='images/logo.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Logo Section -->
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Spam Detection Logo" />
+        </div>
+        
+        <h1>Spam and Ham Classifier</h1>
+        <p>Enter your email content below to check if it's spam:</p>
+        
+        <!-- Spam Detection Form -->
+        <form action="{{ url_for('predict') }}" method="post" id="spam-form">
+            <textarea id="email-content" name="mesg" rows="10" cols="60" placeholder="Paste your email content here..."></textarea>
+            <button type="submit">Check for Spam</button>
+            <div id="result"></div>
+        </form>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Aashish Kumar Saini. All rights reserved.</p>
+        <p>Follow me on <a href="https://www.linkedin.com/in/aashish-kumar-saini-03946b296/" target="_blank">LinkedIn</a> | <a href="https://github.com/aksaini2003" target="_blank">GitHub</a></p>
+        <p>Made with ❤️ using HTML, CSS, Python and Flask</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
